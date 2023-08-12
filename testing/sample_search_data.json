@@ -1,0 +1,171 @@
+{
+    "id": 279996,
+    "title": "AmyloidStandard10_20230327_QE1_dev4.10_maptest002",
+    "startDate": "2023-08-11T07:13:51-05:00",
+    "user": "David Sargeant",
+    "initials": "DS",
+    "inputFiles": [
+        "/odin/prod/testfiles/AmyloidStandard10_20230327_QE1_PreS1.raw"
+    ],
+    "tolerance.peptide": {
+        "value": 20.0,
+        "unit": "Ppm"
+    },
+    "tolerance.fragment": {
+        "value": 0.02,
+        "unit": "Da"
+    },
+    "sequence.min_termini_cleavages": -1,
+    "sequence.missed_cleavages": 3,
+    "sequence.database": {
+        "notes": "SwissProt Human (2019_11) + Revised Contaminants + Insulins + Fuzeon + PRTC + ApoA4 Signal",
+        "shortName": "SPhu_2019_11v18",
+        "firstRunDate": "2023-05-20T12:18:11.000-05:00",
+        "curationFile": {
+            "path": "/odin/dev/databases/SPhu_2019_11v18.fasta"
+        },
+        "title": "SwissProt 2019_ver18 Human -ApoA4signal_RevisedIgVar_Igll1 -Igll5+ Contam + Reversed + Drugs+revisedIGVAR",
+        "ownerEmail": "sargeant.david@mayo.edu",
+        "runDate": "2023-05-20T12:18:11.000-05:00",
+        "deploymentDate": "2023-05-20T12:18:11.000-05:00",
+        "curationSteps": [
+            {
+                "pathToUploadedFile": {
+                    "path": "/apps/dev/local/swift/4.9.0/var/dbcurator/uploads/2023-05-20_12-18-02_SPhu_2019_11v18.fasta"
+                },
+                "fileName": "C:\\fakepath\\SPhu_2019_11v18.fasta",
+                "lastRunCompletionCount": 51915
+            }
+        ],
+        "decoyRegex": "Rev_",
+        "id": 192274
+    },
+    "sequence.enzyme": {
+        "name": "Trypsin (allow P)",
+        "rnminus1": "KR",
+        "rn": "",
+        "id": 31
+    },
+    "modifications.variable": {
+        "modifications": [
+            {
+                "modification": {
+                    "title": "Carbamidomethyl",
+                    "fullName": "Iodoacetamide derivative",
+                    "recordID": 4,
+                    "massMono": 57.021464,
+                    "massAverage": 57.0513,
+                    "composition": "H(3) C(2) N O",
+                    "id": 987
+                },
+                "hidden": false,
+                "site": "C",
+                "term": "Anywhere",
+                "proteinOnly": false,
+                "classification": "Chemical derivative",
+                "specificityGroup": 1,
+                "comments": "",
+                "id": 1686
+            },
+            {
+                "modification": {
+                    "title": "Oxidation",
+                    "fullName": "Oxidation or Hydroxylation",
+                    "recordID": 35,
+                    "massMono": 15.994915,
+                    "massAverage": 15.9994,
+                    "composition": "O",
+                    "id": 786
+                },
+                "hidden": false,
+                "site": "M",
+                "term": "Anywhere",
+                "proteinOnly": false,
+                "classification": "Artefact",
+                "specificityGroup": 8,
+                "comments": "",
+                "id": 1326
+            }
+        ],
+        "id": 4
+    },
+    "modifications.fixed": {
+        "modifications": [],
+        "id": 3
+    },
+    "instrument": {
+        "name": "Orbi/FT (ESI-FTICR)",
+        "series": [
+            {
+                "name": "b",
+                "id": 11
+            },
+            {
+                "name": "y",
+                "id": 17
+            }
+        ],
+        "mascotName": "ESI-FTICR",
+        "id": 5
+    },
+    "extractMsnSettings": {
+        "commandLineSwitches": "",
+        "command": "msconvert",
+        "id": 7
+    },
+    "scaffoldSettings": {
+        "proteinProbability": 0.9,
+        "peptideProbability": 0.9,
+        "minimumPeptideCount": 1,
+        "minimumNonTrypticTerminii": 1,
+        "starredProteins": {
+            "starred": "\\bALBU_HUMAN\\b\n\\b-------\\b\n\\bA4_HUMAN\\b\n\\bANF_HUMAN\\b\n\\bAPBA1_HUMAN\\b\n\\bAPBA2_HUMAN\\b\n\\bAPBA3_HUMAN\\b\n\\bAPBP2_HUMAN\\b\n\\bAPLP1_HUMAN\\b\n\\bAPLP2_HUMAN\\b\n\\bAPOA_HUMAN\\b\n\\bAPOA1_.*_HUMAN\\b\n\\bAPOA1_HUMAN\\b\n\\bAPOA2_HUMAN\\b\n\\bAPOC2_HUMAN\\b\n\\bAPOC3_HUMAN\\b\n\\bASPART_INSULIN_DRUG\\b\n\\bB2MG_HUMAN\\b\n\\bBGH3_HUMAN\\b\n\\bCALC_HUMAN\\b\n\\bCATK_HUMAN\\b\n\\bCYTC_HUMAN\\b\n\\bDETEMIR_INSULIN_DRUG\\b\n\\bDNJB9_HUMAN\\b\n\\bF187A_HUMAN\\b\n\\bFBLN3_HUMAN\\b\n\\bFIBA_HUMAN\\b\n\\bFUZEON_DRUG\\b\n\\bGELS_.*_HUMAN\\b\n\\bGELS_HUMAN\\b\n\\bGLARGINE_INSULIN_DRUG\\b\n\\bGLULISINE_INSULIN_DRUG\\b\n\\bHV\\d\\d\\d_HUMAN\\b\n\\bHV\\d+_HUMAN\\b\n\\bIAPP_HUMAN\\b\n\\bIGA2_HUMAN\\b\n\\bIGG1_HUMAN\\b\n\\bIGHA\\d_HUMAN\\b\n\\bIGHD_HUMAN\\b\n\\bIGHE_HUMAN\\b\n\\bIGHG\\d_HUMAN\\b\n\\bIGH_HUMAN\\b\n\\bIGHM_HUMAN\\b\n\\bIGJ_HUMAN\\b\n\\bIGKC_HUMAN\\b\n\\bIGKV\\d+_HUMAN\\b\n\\bIGKV1_.*_HUMAN\\b\n\\bIGKV1_.*_HUMAN\\b\n\\bIGKV2_.*_HUMAN\\b\n\\bIGKV2_.*_HUMAN\\b\n\\bIGKV3_.*_HUMAN\\b\n\\bIGKV4_.*_HUMAN\\b\n\\bIGKV4_.*_HUMAN\\b\n\\bIGL1_HUMAN\\b\n\\bIGL2_HUMAN\\b\n\\bIGL3_HUMAN\\b\n\\bIGL6_HUMAN\\b\n\\bIGLC1_.*_HUMAN\\b\n\\bIGLC1_HUMAN\\b\n\\bIGLC2_.*_HUMAN\\b\n\\bIGLC2_HUMAN\\b\n\\bIGLC3_.*_HUMAN\\b\n\\bIGLC3_.*_HUMAN\\b\n\\bIGLC3_HUMAN\\b\n\\bIGLC3_HUMAN\\b\n\\bIGLC6_.*_HUMAN\\b\n\\bIGLC6_HUMAN\\b\n\\bIGLC7_HUMAN\\b\n\\bIGLL.*_HUMAN\\b\n\\bIGLL1_HUMAN\\b\n\\bIGLL5_HUMAN\\b\n\\bIGLV_DUFF_HUMAN\\b\n\\bIGLV1_.*_HUMAN\\b\n\\bIGLV1_.*_HUMAN\\b\n\\bIGLV11_JTO_HUMAN\\b\n\\bIGLV2_.*_HUMAN\\b\n\\bIGLV2_.*_HUMAN\\b\n\\bIGLV3_.*_HUMAN\\b\n\\bIGLV3_.*_HUMAN\\b\n\\bIGLV4_.*_HUMAN\\b\n\\bIGLV6_.*_HUMAN\\b\n\\bIGS\\d+_HUMAN\\b\n\\bIGVAR.*\\b\n\\bINS_HUMAN\\b\n\\bK1C14_HUMAN\\b\n\\bK2C5_HUMAN\\b\n\\bKAC_HUMAN\\b\n\\bKV\\d+_HUMAN\\b\n\\bKV113Lay_HUMAN\\b\n\\bKV117Scw_HUMAN\\b\n\\bLAC\\d+_HUMAN\\b\n\\bLAC\\d+_HUMAN\\b\n\\bLAC_HUMAN\\b\n\\bLAC1_HUMAN\\b\n\\bLAC2_HUMAN\\b\n\\bLAC3_HUMAN\\b\n\\bLAC6_HUMAN\\b\n\\bLAC7_HUMAN\\b\n\\bLECT1_HUMAN\\b\n\\bLECT2_HUMAN\\b\n\\bLiraglutide_DRUG\\b\n\\bLISPRO_INSULIN_DRUG\\b\n\\bLV\\d+_HUMAN\\b\n\\bLYSC_.*_HUMAN\\b\n\\bLYSC_D67H_HUMAN\\b\n\\bLYSC_F57I_HUMAN\\b\n\\bLYSC_F57I_T70N_2_HUMAN\\b\n\\bLYSC_F57I_T70N_HUMAN\\b\n\\bLYSC_HUMAN\\b\n\\bLYSC_I56D_HUMAN\\b\n\\bLYSC_I56T_HUMAN\\b\n\\bLYSC_W64R_HUMAN\\b\n\\bLYSC_Y54N_HUMAN\\b\n\\bMFGM_HUMAN\\b\n\\bMUC_HUMAN\\b\n\\bMUCB_HUMAN\\b\n\\bMUT.*\\b\n\\bODAM_HUMAN\\b\n\\bP00000_PIERCESTANDARD\\b\n\\bPRL_HUMAN\\b\n\\bQ96JD0_HUMAN\\b\n\\bQ96JD1_HUMAN\\b\n\\bQ96JD2_HUMAN\\b\n\\bSAA_HUMAN\\b\n\\bSAA1_HUMAN\\b\n\\bSAA2_HUMAN\\b\n\\bSAA3_HUMAN\\b\n\\bSAA4_HUMAN\\b\n\\bSEMG1_HUMAN\\b\n\\bSEMG2_HUMAN\\b\n\\bTRFL_HUMAN\\b\n\\bTTHY_.*_HUMAN\\b\n\\bTTHY_HUMAN\\b\n\\bTTHY_ILE73VAL_HUMAN\\b\n\\bVPREB_HUMAN\\b\n\\b-------\\b\n\\bAPOA4_.*_HUMAN\\b\n\\bAPOA4_HUMAN\\b\n\\bAPOE_...._HUMAN\\b\n\\bAPOE_HUMAN\\b\n\\bSAMP_HUMAN\\b",
+            "delimiter": "\\s+",
+            "regularExpression": true,
+            "id": 115
+        },
+        "saveOnlyIdentifiedSpectra": true,
+        "saveNoSpectra": false,
+        "connectToNCBI": false,
+        "annotateWithGOA": false,
+        "useIndependentSampleGrouping": false,
+        "useFamilyProteinGrouping": false,
+        "mzIdentMlReport": true,
+        "highMassAccuracyScoring": false,
+        "use3xScoring": false,
+        "percolatorScoring": true,
+        "id": 212
+    },
+    "enabledEngines": {
+        "engineConfigs": [
+            {
+                "code": "SCAFFOLD",
+                "version": "5.2.2",
+                "id": 51
+            },
+            {
+                "code": "TANDEM",
+                "version": "2017.02.01.4",
+                "id": 34
+            },
+            {
+                "code": "COMET",
+                "version": "2019.01.5",
+                "id": 33
+            },
+            {
+                "code": "QUAMETER",
+                "version": "1.1.21342",
+                "id": 42
+            },
+            {
+                "code": "MASCOT",
+                "version": "2.8",
+                "id": 43
+            }
+        ],
+        "id": 92
+    },
+    "titleSuffix": "",
+    "metadata": {}
+}
