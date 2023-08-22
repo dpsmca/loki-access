@@ -1,10 +1,20 @@
 Private Const CP_UTF8 = 65001
+
+' Add check to work with Office 64-bit
+#If VBA7 Then
+Private Declare PtrSafe Function WideCharToMultiByte Lib "Kernel32" ( _
+    ByVal CodePage As Long, ByVal dwflags As Long, _
+    ByVal lpWideCharStr As Long, ByVal cchWideChar As Long, _
+    ByVal lpMultiByteStr As Long, ByVal cchMultiByte As Long, _
+    ByVal lpDefaultChar As Long, ByVal lpUsedDefaultChar As Long) As Long
+#Else
 Private Declare Function WideCharToMultiByte Lib "Kernel32" ( _
     ByVal CodePage As Long, ByVal dwflags As Long, _
     ByVal lpWideCharStr As Long, ByVal cchWideChar As Long, _
     ByVal lpMultiByteStr As Long, ByVal cchMultiByte As Long, _
     ByVal lpDefaultChar As Long, ByVal lpUsedDefaultChar As Long) As Long
- 
+#End If
+
 Public LastError As String
  
 Public Function Post(url As String, data As String) As DOMDocument
